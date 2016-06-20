@@ -1,11 +1,13 @@
 language: python
 python:
-  - 3.5.0
-install:
-  - pip install pep8
-  - pip install https://github.com/dcramer/pyflakes/tarball/master
-before_script:
-  - "pep8"
-  - pyflakes
-script:
-  - python setup.py test
+  - "2.6"
+  - "2.7"
+  - "3.2"
+  - "3.3"
+  - "3.4"
+  - "3.5"
+  - "3.5-dev" # 3.5 development branch
+  - "nightly" # currently points to 3.6-dev
+# command to install dependencies
+# command to run tests
+script: nosetests
